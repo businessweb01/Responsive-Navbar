@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background:linear-gradient(180deg, #C8C1AC,#FFE794);
+    min-height: 100vh;
+    width: 100%;
+}
+/* Navbar */
+.header{
+    width: 100%;
+    height: fit-content;
+}
+.navigation{
+    display: flex;
+    background-color: #1a1a1a;
+    padding: 20px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    margin-inline: 2rem;
+}
+.nav-link{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: clamp(0.7rem, 1vw, 1.5rem);
+    transition: 0.5s ease;
+}
+.nav-link:hover{
+    color:rgba(255, 255, 255, 1);
+}
+.nav-icons{
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+.bell-icon:hover{
+    animation: tada 1s;
+}
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+@media screen and (max-width: 768px) {
+   .nav-links{
+       margin-inline: 1rem;
+       gap: 1rem;
+   }
+    
+}
+/* End of Navbar */
+
+.logo{
+    /* margin-top: 1rem; */
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(2rem, 2vw, 3rem);
+
+}
+.Agri{
+    background: url(grass.jpg);
+    background-size: contain;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+}
+/* start of content */
+.content {
+    margin-top: 5rem;
+    margin-inline: 2rem;
+    display: flex;
+}
+/* Start of box1*/
+.box1 {
+    padding: 10px 10px;
+    width: 300px;
+    height: fit-content;
+    border-radius: 10px;
+    background-color:#efefef;
+    box-shadow: 3.3px 3.3px 1px #77787A, -3.3px -3.3px 1px #FFFFFF;
+    margin-right: 1rem;
+}
+.box1-buttons{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.add-course{
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 600;
+    padding: 10px 10px;
+    max-width: 200px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px;
+    border: none;
+    background-color: #dbdbdba3;
+    box-shadow: 3.3px 3.3px 1px #77787A, -3.3px -3.3px 1px #FFFFFF;
+}
+.archives{
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    font-weight: 600;
+    padding: 10px 10px;
+    max-width: 200px;
+    width: 100%;
+    height: fit-content;
+    border: none;
+    border-radius: 20px;
+    background-color: #dbdbdba3;
+    box-shadow: 3.3px 3.3px 1px #77787A, -3.3px -3.3px 1px #FFFFFF;
+}
+.storage-info {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #2a2ccb; /* Green color */
+    transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.storage-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.button-clicked{
+    background-color: #ffdd79;
+    box-shadow: inset 5px 5px 6px #a29f7a,
+            inset -5px -5px 6px #FEDF91;
+}
+/* end of box1 */
+
+/* start of box2 */
+.box2 {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #efefef;
+    box-shadow: 3.3px 3.3px 1px #77787A, -3.3px -3.3px 1px #FFFFFF;
+}
+
+.courses p{
+    margin-top: 0.5rem;
+    font-size: clamp(2rem, 2vw, 3rem);
+    font-weight: 600;
+    text-align: center;
+    
+}
+.course-list table {
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Remove the space between cells */
+    width: 100%; /* Make the table fit the width of the container */
+}
+.course-list th, .course-list td {
+    padding: 8px; /* Add some padding to the cells */
+    border: 1px solid #ddd; /* Add a border to the cells */
+    text-align: left; /* Align the text to the left */
+}
+.course-list th {
+    background-color: #f2f2f2; /* Add a background color to the header cells */
+    text-align: center;
+}
+.course-list td:not(:last-child) {
+    width: 20%; /* Set the width of the cells, except for the last one */
+}
+
+
+/* Media query for screen sizes 762px and below */
+@media (max-width: 762px) {
+    .content {
+        flex-direction: column; /* Stack boxes vertically */
+        margin-top: 2rem;
+    }
+    .box1 {
+        margin-top: 2rem;
+        order: 2; /* Ensure box1 is on top */
+        width: 100%;/* Adjust width to fit the container */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 1rem; /* Add bottom margin for spacing */
+        height:fit-content;
+    }
+    .box1-buttons{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .box2 {
+        order: 1; /* Ensure box2 is below box1 */
+        width: 100%; /* Adjust width to fit the container */
+    }
+    
+}
+
